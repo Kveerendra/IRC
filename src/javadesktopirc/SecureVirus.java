@@ -177,6 +177,11 @@ public class SecureVirus extends javax.swing.JFrame {
         jMenu1.setText("File");
 
         jMenuItem1.setText("Add Channel");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem1);
 
         jMenuItem2.setText("Exit");
@@ -234,6 +239,11 @@ public class SecureVirus extends javax.swing.JFrame {
     private void formWindowDeiconified(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowDeiconified
       //maximized
     }//GEN-LAST:event_formWindowDeiconified
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        //clicked add channel
+        // so add tab with channel
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     /**
      * @param args the command line arguments
