@@ -6,6 +6,8 @@
 
 package javadesktopirc;
 
+import java.awt.TrayIcon;
+
 /**
  *
  * @author veerendra
@@ -50,6 +52,14 @@ public class SecureVirus extends javax.swing.JFrame {
         jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowDeiconified(java.awt.event.WindowEvent evt) {
+                formWindowDeiconified(evt);
+            }
+            public void windowIconified(java.awt.event.WindowEvent evt) {
+                formWindowIconified(evt);
+            }
+        });
 
         jTabbedPane1.setAutoscrolls(true);
 
@@ -170,11 +180,21 @@ public class SecureVirus extends javax.swing.JFrame {
         jMenu1.add(jMenuItem1);
 
         jMenuItem2.setText("Exit");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem2);
 
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setText("Edit");
+        jMenu2.setText("About Me");
+        jMenu2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu2ActionPerformed(evt);
+            }
+        });
         jMenuBar1.add(jMenu2);
 
         setJMenuBar(jMenuBar1);
@@ -192,6 +212,28 @@ public class SecureVirus extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jMenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu2ActionPerformed
+        
+        //about me popup
+        
+        System.out.println("About me was Clicked");
+        
+        
+    }//GEN-LAST:event_jMenu2ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        //close
+        this.dispose();
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void formWindowIconified(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowIconified
+        ///minimized
+    }//GEN-LAST:event_formWindowIconified
+        private TrayIcon trayIcon;
+    private void formWindowDeiconified(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowDeiconified
+      //maximized
+    }//GEN-LAST:event_formWindowDeiconified
 
     /**
      * @param args the command line arguments

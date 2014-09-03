@@ -26,15 +26,7 @@ public class JavaDesktopIrc  {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws IOException, BadLocationException {
-        Main m = new Main();
-        JTextPane text_panel = m.getjTextPane1();
-        HTMLEditorKit kit = new HTMLEditorKit();
-        HTMLDocument doc = new HTMLDocument();
-    text_panel.setEditorKit(kit);
-    text_panel.setDocument(doc);
-    kit.insertHTML(doc, doc.getLength(), "<b>hello", 0, 0, HTML.Tag.B);
-    kit.insertHTML(doc, doc.getLength(), "<font color='red'><u>wor<br />l<br />l<br />l<br />l<br />l<br />l<br />l<br />l<br />l<br />l<br />l<br />l<br />l<br />l<br />l<br />l<br />l<br />l<br />l<br />l<br />l<br />l<br />l<br />l<br />l<br />l<br />l<br />l<br />l<br />l<br />l<br />l<br />l<br />l<br />l<br />l<br />l<br />l<br />l<br />l<br />l<br />l<br />l<br />l<br />l<br />l<br />l<br />l<br />l<br />l<br />l<br />l<br />l<br />l<br />l<br />l<br />l<br />l<br />l<br />l<br />l<br />l<br />ld</u></font>", 0, 0, null);
-    m.setVisible(true);
+        
         
     }
     
