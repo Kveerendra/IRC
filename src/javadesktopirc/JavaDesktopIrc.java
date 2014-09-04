@@ -20,7 +20,9 @@ public class JavaDesktopIrc  {
      */
     public static void main(String[] args) throws IOException, BadLocationException {
         
-        
+        SecureVirus s = new SecureVirus();
+        s.setVisible(true);
+        IRC i = new IRC(s);
     }
     
 }
